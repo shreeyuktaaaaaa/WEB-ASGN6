@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Solutions</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('partials/navbar', {page: ''}) %>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="hero min-h-96 bg-base-200 rounded-lg">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Climate Solutions</h1>
+                    <p class="py-6">Discover innovative solutions to combat climate change. Explore projects that are making a real difference in our world.</p>
+                    <a href="/solutions/projects" class="btn btn-primary">Explore All Projects</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400" alt="Refrigerant Management" class="h-48 w-full object-cover"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Refrigerant Management</h2>
+                        <p>Proper refrigerant management can reduce greenhouse gas emissions significantly by preventing leaks and improving efficiency.</p>
+                        <div class="card-actions justify-end">
+                            <a href="/solutions/projects/1" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=400" alt="Wind Turbines" class="h-48 w-full object-cover"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Wind Turbines (Onshore)</h2>
+                        <p>Onshore wind power is one of the most cost-effective renewable energy technologies available today.</p>
+                        <div class="card-actions justify-end">
+                            <a href="/solutions/projects/2" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=400" alt="Solar Power" class="h-48 w-full object-cover"/></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Solar Photovoltaics</h2>
+                        <p>Solar PV technology continues to advance, making clean energy more accessible and affordable worldwide.</p>
+                        <div class="card-actions justify-end">
+                            <a href="/solutions/projects/9" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-12">
+        <div>
+            <p>© 2025 Climate Solutions - Making a difference for our planet</p>
+        </div>
+    </footer>
+</body>
+</html>

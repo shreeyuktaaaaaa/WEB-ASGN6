@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project - Climate Solutions</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar', {page: '/solutions/addProject' }) %>
+        <div class="container mx-auto px-4 py-8">
+            <div class="hero min-h-64 bg-base-200 rounded-lg">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">Add Project</h1>
+                        <p class="py-6">Create a new climate solution project</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <div class="card bg-base-100 shadow-xl max-w-2xl mx-auto">
+                    <div class="card-body">
+                        <form method="POST" action="/solutions/addProject">
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Title</span>
+                                </label>
+                                <input type="text" name="title" class="input input-bordered" required>
+                            </div>
+
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Feature Image URL</span>
+                                </label>
+                                <input type="url" name="feature_img_url" class="input input-bordered" required>
+                            </div>
+
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Sector</span>
+                                </label>
+                                <select name="sector_id" class="select select-bordered" required>
+                                    <option value="">Choose a sector</option>
+                                    <% sectors.forEach(sector=> { %>
+                                        <option value="<%= sector.id %>">
+                                            <%= sector.sector_name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
+
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Short Introduction</span>
+                                </label>
+                                <textarea name="intro_short" class="textarea textarea-bordered" required></textarea>
+                            </div>
+
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Summary</span>
+                                </label>
+                                <textarea name="summary_short" class="textarea textarea-bordered" required></textarea>
+                            </div>
+
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Impact</span>
+                                </label>
+                                <textarea name="impact" class="textarea textarea-bordered" required></textarea>
+                            </div>
+
+                            <div class="form-control mb-4">
+                                <label class="label">
+                                    <span class="label-text">Original Source URL</span>
+                                </label>
+                                <input type="url" name="original_source_url" class="input input-bordered" required>
+                            </div>
+
+                            <div class="form-control mt-6">
+                                <button type="submit" class="btn btn-primary">Add Project</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-12">
+            <div>
+                <p>© 2025 Climate Solutions - Making a difference for our planet</p>
+            </div>
+        </footer>
+</body>
+
+</html>

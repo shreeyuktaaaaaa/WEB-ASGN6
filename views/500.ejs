@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Climate Solutions</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar', {page: '' }) %>
+        <div class="container mx-auto px-4 py-8">
+            <div class="hero min-h-96 bg-base-200 rounded-lg">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold">500 - Server Error</h1>
+                        <p class="py-6">
+                            <%= message %>
+                        </p>
+                        <a href="/" class="btn btn-primary">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-12">
+            <div>
+                <p>© 2025 Climate Solutions - Making a difference for our planet</p>
+            </div>
+        </footer>
+</body>
+
+</html>

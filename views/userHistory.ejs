@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User History - Climate Solutions</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partials/navbar', {page: '/userHistory' }) %>
+        <div class="min-h-screen bg-slate-700 px-4 py-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl font-light text-gray-300 mb-4">
+                        <%= session.user.userName %>
+                    </h1>
+                    <p class="text-gray-400">User History: <%= session.user.email %>
+                    </p>
+                </div>
+
+                <div class="bg-slate-600 rounded overflow-hidden">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="bg-slate-800">
+                                <th class="px-6 py-4 text-left text-sm text-gray-400 font-medium">Login Date/Time</th>
+                                <th class="px-6 py-4 text-left text-sm text-gray-400 font-medium">Client Information
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% session.user.loginHistory.forEach((login, index)=> { %>
+                                <tr class="border-b border-slate-500">
+                                    <td class="px-6 py-4 text-gray-300 text-sm">
+                                        <%= login.dateTime %>
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-300 text-sm">
+                                        <%= login.userAgent %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
